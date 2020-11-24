@@ -1,0 +1,26 @@
+﻿Objective:
+	Review the ExampleProgram console application. Do not modify or refactor the code. Instead describe any changes 
+	you think should be made in the section below. Don't spend more than 30 minutes on this entire assignment.
+        Feel free to describe why you made particular design decisions.
+
+
+Suggested Changes:
+
+Issue found :
+
+In the Program.cs class file under the Main Class on below line.
+exampleClass.ExampleMethod("ExampleTexttxt");
+
+here the parrametter passed as "ExampleTexttxt" isent correct which makes the ExampleMethod() class to run into a catcch block throwing an exception for the same.
+
+Solution :
+
+The method call found as issue above should be replaced as below 
+	exampleClass.ExampleMethod("ExampleText.txt");
+
+here I have added a "." seperator in the parametter name as seen above to seperate the file extenssion from the file name to be recognised.
+Now the Example Method will not run into an exception through Catch block and whll give the resulre output by executing the try 
+block as it can now find the named file with proper extenssion and read from the same.
+
+Also I would replace the code in the catch block to catch an exception like checking if the file exists insted of appending strings to a text variable .
+
